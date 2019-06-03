@@ -2,7 +2,7 @@
 using namespace std;
 class mat{
     private:
-        int a[10][10],b[10][10],c[10][10],i,j,k;
+        int a[3][3],b[3][3],c[3][3],i,j,k;
     public:
 //input
     void get()
@@ -55,8 +55,10 @@ class mat{
                     {
                         for(k=0;k<3;k++)
                         {
-                            mul = a[i][k]*b[k][i];
-                            c[i][j]=mul;
+                            mul =mul + a[i][k]*b[k][j]; /* Pagal aurat, matrix multliplication garna ni aauna, a[1][1]*b[1][1]+a[1][2]+b[2][1]*a[1][3]*b[3][1],                        
+                                 tya a11 * b11 ko value mul ma hala ani mul ma a12 * a21 add gara ani feri mul ma a13*a31 ko value add gara; same for remaining
+                                 */
+                                c[i][j]=mul;
                         }
                     }	
                 }
