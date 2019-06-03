@@ -55,7 +55,7 @@ class mat{
                     {
                         for(k=0;k<3;k++)
                         {
-                            mul = a[i][k]*b[k][i];
+                            mul = a[i][k]*b[k][j];
                             c[i][j]=mul;
                         }
                     }	
